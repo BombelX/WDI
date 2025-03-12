@@ -1,0 +1,20 @@
+
+tab = [23,1232,1312,321,43,432,423,4,233,1231,2312,423,4321,4312,43123,123,21,4312,412,3]
+t_len = len(tab)
+
+max_len = [0,0]
+
+for i in range(t_len):
+    last = tab[i]
+    len = 1
+    for j in range(i+1,t_len):
+        now = tab[j]
+        if now > last:
+            last = now
+            len += 1
+        else:
+            break
+    if len > max_len[0]:
+        max_len = [len,i]
+print(max_len[0],max_len[1]+1)
+            
